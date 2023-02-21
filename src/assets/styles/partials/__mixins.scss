@@ -1,0 +1,16 @@
+@mixin triangolo($top, $right) {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border-top: $top solid rgb(236, 11, 67);
+  // border-top: $top solid linear-gradient(117deg, rgba(236,11,67,1) 0%, rgba(241,78,83,0.7609418767507002) 20%, rgba(247,157,101,0.5452556022408963) 100%);;
+
+  border-right: calc(($right / 2)*2) solid transparent;
+  background: linear-gradient(rgba(236, 11, 67, 1) 0%, rgba(241, 78, 83, 0.7609418767507002) 20%, rgba(247, 157, 101, 0.5452556022408963) 100%);
+  opacity: 0.33;
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  // &:hover {
+  //   opacity: 1;
+  // }
+}
